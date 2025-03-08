@@ -1,0 +1,49 @@
+.header-section {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: inline-flex;
+    width: 100%;
+
+    #miimento-logo {
+        padding: 10px 20px;
+        width: 20%;
+        height: 40px;
+    }
+
+    .hidden-block {
+        width: 35%;
+    }
+
+    .navbar {
+        display: flex;
+        width: 45%;
+        position: relative;
+        color: white;
+        font-family: cursive, sans-serif;
+        cursor: pointer;
+
+        :hover {
+            background-color: white;
+            color: black;
+        }
+
+        .navbar-option {
+            width: 20%;
+            list-style-type: none;
+            border: 1px solid white;
+            border-radius: 20px;
+            align-content: center;
+            text-align: center;
+            height: 35px;
+            margin: 0 10px;
+
+            .navbar-link {
+                text-decoration: none;
+                list-style: none;
+                color: inherit;
+                border: none;
+            }
+        }
+    }
+}

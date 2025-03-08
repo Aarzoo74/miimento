@@ -1,0 +1,63 @@
+.home-page {
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+    .container {
+        padding: 60px 20px 40px 20px;
+    
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #222;
+            text-shadow: 1px 5px 2px rgba(0, 0, 0, 0.4);
+            margin: 10px;
+        }
+        h2 {
+            font-size: 26px;
+            font-weight: bold;
+            color: black;
+            text-shadow: 1px 5px 2px rgba(0, 0, 0, 0.4);
+            margin: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            max-width: 600px;
+            margin: 10px auto;
+            line-height: 1.5;
+        }
+        .buttons {
+            margin-top: 20px;
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: bold;
+                border: 2px solid black;
+                background-color: white;
+                cursor: pointer;
+                margin: 10px;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+            }
+            .btn:hover {
+                background-color: black;
+                color: white;
+            }
+            .btn-black {
+                background-color: black;
+                color: white;
+            }
+            .btn-black:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    .how-it-works {
+        font-size: 26px;
+        font-weight: bold;
+        text-shadow: 1px 5px 2px rgba(0, 0, 0, 0.4);
+    }
+}
