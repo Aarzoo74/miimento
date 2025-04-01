@@ -7,17 +7,18 @@
 
     #miimento-logo {
         padding: 10px 20px;
-        width: 20%;
+        width: 30%;
         height: 40px;
+        cursor: pointer;
     }
 
     .hidden-block {
-        width: 35%;
+        width: 26%;
     }
 
     .navbar {
         display: flex;
-        width: 45%;
+        width: 33%;
         position: relative;
         color: white;
         font-family: cursive, sans-serif;
@@ -29,7 +30,7 @@
         }
 
         .navbar-option {
-            width: 20%;
+            width: 28%;
             list-style-type: none;
             border: 1px solid white;
             border-radius: 20px;
