@@ -55,6 +55,12 @@
                 background-color: white;
                 color: rgb(28 28 28 / var(--tw-bg-opacity, 1));;
             }
+
+            @media (max-width: 768px) {
+                .btn {
+                    font-weight: normal;
+                }
+            }
         }
     }
 
@@ -120,6 +126,9 @@
         .feature {
             width: 80%;
             margin: 10px auto;
+        }
+        .btn {
+            font-weight: normal;
         }
     }
 
