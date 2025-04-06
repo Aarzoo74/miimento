@@ -1,0 +1,30 @@
+<div class="registration-wrapper">
+    <form [formGroup]="registrationForm">
+
+        <h2>Basic Information</h2>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Organization Name</mat-label>
+            <input matInput type="text" placeholder="Organization Name" formControlName="organizationName">
+        </mat-form-field><br />
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Email ID</mat-label>
+            <input matInput type="text" placeholder="Email ID" formControlName="emailId">
+        </mat-form-field><br />
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="text" placeholder="Contact Number" formControlName="phoneNumber">
+        </mat-form-field><br />
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Address</mat-label>
+            <textarea matInput type="text" placeholder="Contact Number" formControlName="address"></textarea>
+        </mat-form-field><br />
+
+        <button mat-button [disabled]="registrationForm.invalid" (click)="submitForm()">Submit</button>
+
+    </form>
+</div>
+<h1 *ngIf="isFormSubmitted" style="color: green;">We will contact you soon!!</h1>

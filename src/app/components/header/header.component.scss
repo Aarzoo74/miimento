@@ -2,49 +2,70 @@
     position: sticky;
     top: 0;
     background-color: black;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  #miimento-logo {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-option {
+    height: 35px;
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: white;
+    font-family: cursive, sans-serif;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-option:hover {
+    background-color: white;
+  }
+  
+  .navbar-option:hover .navbar-link {
+    color: black;
+  }
 
-    #miimento-logo {
-        padding: 10px 20px;
-        width: 30%;
-        height: 40px;
-        cursor: pointer;
-    }
-
-    .hidden-block {
-        width: 26%;
+  @media (max-width: 768px) {
+    .navbar, .header-section {
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .navbar {
-        display: flex;
-        width: 33%;
-        position: relative;
-        color: white;
-        font-family: cursive, sans-serif;
-        cursor: pointer;
-
-        :hover {
-            background-color: white;
-            color: black;
-        }
-
-        .navbar-option {
-            width: 28%;
-            list-style-type: none;
-            border: 1px solid white;
-            border-radius: 20px;
-            align-content: center;
-            text-align: center;
-            height: 35px;
-            margin: 0 10px;
-
-            .navbar-link {
-                text-decoration: none;
-                list-style: none;
-                color: inherit;
-                border: none;
-            }
-        }
+        align-items: flex-start;
     }
-}
+
+    #miimento-logo {
+        width: 200px;
+    }
+  }

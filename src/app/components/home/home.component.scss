@@ -1,10 +1,11 @@
 .home-page {
+  --tw-border-opacity: 1;
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: azure;
 
     .container {
-        padding: 60px 20px 40px 20px;
+        padding: 40px 20px;
     
         h1 {
             font-size: 40px;
@@ -24,6 +25,10 @@
         .buttons {
             margin-top: 20px;
 
+            a {
+                text-decoration: none;
+            }
+
             .btn {
                 padding: 12px 24px;
                 font-size: 16px;
@@ -34,6 +39,9 @@
                 margin: 10px;
                 border-radius: 25px;
                 transition: all 0.3s ease;
+            }
+            .btn span {
+                margin-left: 0.5rem;
             }
             .btn:hover {
                 background-color: rgb(28 28 28 / var(--tw-bg-opacity, 1));;
@@ -52,7 +60,7 @@
 
     .how-it-works {
         background: azure;
-        padding: 0 20px;
+        padding: 10px 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -114,4 +122,53 @@
             margin: 10px auto;
         }
     }
+
+    .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 1rem;
+        background: linear-gradient(to bottom, #ff8551, #fd72e0);
+        text-align: center;
+      }
+      
+      .hero-content {
+        max-width: 800px;
+      }
+      
+      .hero-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 1rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+        color: #000;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      
+      .cta-button {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+      
+      .cta-button span {
+        margin-left: 0.5rem;
+      }
+      
+      .cta-button:hover {
+        transform: scale(1.05);
+        background-color: black;
+        color: white;
+      }
 }
