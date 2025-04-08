@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,9 +26,23 @@ export class RegistrationComponent {
 
   isFormSubmitted: boolean = false;
 
+  constructor(private http: HttpClient) {}
+
   submitForm() {
-    this.isFormSubmitted = true;
-    console.log(this.registrationForm.value);
-    this.registrationForm.reset();
+    if (this.registrationForm.valid) {
+      this.http.post('http://127.0.0.1:8000/api/register', this.registrationForm.value)
+        .subscribe({
+          next: (response) => {
+            this.isFormSubmitted = true;
+            console.log('Form submitted successfully:', response);
+            alert('Registration successful!');
+            this.registrationForm.reset();
+          },
+          error: (error) => {
+            console.error('Error submitting form:', error);
+            alert('Failed to submit the form. Please try again.');
+          }
+        });
+    }
   }
 }
